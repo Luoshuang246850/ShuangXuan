@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+  "name": "shuangxuanadmin",
+=======
   "name": "sobblogadmin",
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,9 +16,17 @@
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
     "file-saver": "^2.0.5",
+<<<<<<< HEAD
+    "store.js": "^1.0.4",
     "vue": "^2.6.11",
     "vue-image-crop-upload": "^2.5.0",
     "vue-router": "^3.3.4",
+    "vuex": "^3.6.2",
+=======
+    "vue": "^2.6.11",
+    "vue-image-crop-upload": "^2.5.0",
+    "vue-router": "^3.3.4",
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
     "xlsx": "^0.17.2"
   },
   "devDependencies": {
