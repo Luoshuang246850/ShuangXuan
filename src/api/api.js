@@ -1,6 +1,64 @@
 import http from './http';
 // import col from "element-ui/packages/col/src/col";
 
+<<<<<<< HEAD
+var value = window.localStorage.getItem('value');
+export const success_code = 20000;
+export const failed_code = 40000;
+
+// 公司信息获取
+export const listCompanies = (page,size) => {
+	console.log(value);
+	return http.requestGet('/back/findAllCompany/'+size+'/'+page);
+};
+//获取公司详情
+export const getCompanyDetail = () => {
+	return http.requestGet()
+}
+
+//添加公司
+export const addCompany = () => {
+	return http.requestPost('');
+}
+//搜索公司
+export const doCompanySearch = () => {
+	return http.requestGet('');
+}
+//删除公司
+export const deleteCompanyById = () => {
+	return http.requestDelete('');
+}
+//更新公司信息
+export const updateCompanyInfo = () => {
+	return http.requestPut('');
+}
+
+// 岗位信息获取
+export const listJobs = () => {
+	return http.requestGet('');
+};
+//获取岗位详情
+export const getjobDetail = () => {
+	return http.requestGet()
+}
+//添加岗位
+export const addJob = () => {
+	return http.requestPost('');
+}
+//岗位名搜索
+export const doJobSearch = () => {
+	return http.requestGet('');
+}
+//删除岗位
+export const deleteJobById = () => {
+	return http.requestDelete('');
+}
+//更新岗位信息
+export const updateJobInfo = () => {
+	return http.requestPut('');
+}
+
+=======
 
 export const success_code = 20000;
 export const failed_code = 40000;
@@ -12,6 +70,7 @@ export const listCompanies = () => {
 export const addCompany = () => {
 	return http.requestPost('');
 }
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
 
 
 // 学生——岗位选择信息获取
@@ -37,15 +96,30 @@ export const doSelectionSearch = (page,size,c) =>{
 }
 
 
+<<<<<<< HEAD
+//解析token
+=======
 // //解析token
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
 // export const checkToken = () => {
 //     return http.requestGet('/user/utils/check_token');
 // };
 
+<<<<<<< HEAD
+//登录
+export const doLogin = (s) => {
+    return http.requestPost('/admin',s);
+};
+export const judgeCaptcha = (verCode) => {
+	return http.requestPost('/judgeCaptcha',verCode)
+}
+
+=======
 // //登录
 // export const doLogin = (verifyCode, sobUser) => {
 //     return http.requestPost('/user/account/login/' + verifyCode + '/?from=p_', sobUser);
 // };
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
 
 
 // export const doLogout = () => {
