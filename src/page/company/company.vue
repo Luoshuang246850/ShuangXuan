@@ -10,12 +10,20 @@
         <div class="Company-search-pat">
             <el-form :inline="true" size="mini">
                 <el-form-item label="公司名称">
+<<<<<<< HEAD
+                    <el-input v-model="search.name" placeholder="请输入公司名称"></el-input>
+=======
                     <el-input v-model="search.number" placeholder="请输入公司名称"></el-input>
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                 </el-form-item>
                 <el-form-item>
                     <el-button type="primary" @click="doSearch">搜 索</el-button>
                     <el-button type="danger" @click="cleanSearch">清 空</el-button>
+<<<<<<< HEAD
+                    <el-button type="primary" @click="showAddCompany">添加公司信息</el-button>
+=======
                     <el-button type="primary" @click="showAddCompany">添加用户</el-button>
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                 </el-form-item>
             </el-form>
         </div>
@@ -27,33 +35,61 @@
                     :data="companyList"
                     tooltip-effect="dark"
                     @selection-change="handleSelectionChange"
+<<<<<<< HEAD
+                    style="width: 100%"
+					>
+=======
                     style="width: 100%">
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                 <el-table-column
                         type="selection"
                         width="55">
                 </el-table-column>
                 <el-table-column
                         fixed
+<<<<<<< HEAD
+                        prop="name"
+=======
                         prop="id"
                         label="ID"
                         width="100">
                 </el-table-column>
                 <el-table-column
                         prop="number"
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                         label="公司名称"
                         width="150">
                 </el-table-column>
                 <el-table-column
+<<<<<<< HEAD
+                        prop="num"
+                        label="公司人数"
+                        width="100">
+                </el-table-column>
+                <el-table-column
+                        prop="category"
+=======
                         prop="name"
                         label="公司人数"
                         width="150">
                 </el-table-column>
                 <el-table-column
                         prop="college"
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                         label="公司性质"
                         width="150">
                 </el-table-column>
                 <el-table-column
+<<<<<<< HEAD
+                        prop="description"
+                        label="公司简介"
+                        width="300">
+                </el-table-column>
+                <el-table-column
+                        prop="address"
+                        label="公司地址"
+                        width="3000">
+=======
                         prop="department"
                         label="公司简介"
                         width="150">
@@ -62,17 +98,26 @@
                         prop="passwd"
                         label="公司地址"
                         width="150">
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                 </el-table-column>
 
                 <el-table-column
                         fixed="right"
                         label="操作"
+<<<<<<< HEAD
+                        width="250">
+=======
                         width="200">
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                     <template slot-scope="scope">
                         <el-button type="primary" size="mini" @click="edit(scope.row)">编辑</el-button>
                         <el-button type="danger" size="mini"
                                    @click="deleteItem(scope.row)">删除
                         </el-button>
+<<<<<<< HEAD
+						<el-button type="info" size="mini" @click="addJob(scope.row)">添加岗位</el-button>
+=======
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                     </template>
                 </el-table-column>
             </el-table>
@@ -98,6 +143,21 @@
                        width="500px">
                 <el-form>
                     <el-form-item label="公司名称" :label-width="formLabelWidth">
+<<<<<<< HEAD
+                        <el-input v-model="form.name"></el-input>
+                    </el-form-item>
+                    <el-form-item label="公司人数" :label-width="formLabelWidth">
+                        <el-input v-model="form.num"></el-input>
+                    </el-form-item>
+                    <el-form-item label="公司性质" :label-width="formLabelWidth">
+                        <el-input v-model="form.category" ></el-input>
+                    </el-form-item>
+                    <el-form-item label="公司简介" :label-width="formLabelWidth">
+                        <el-input v-model="form.description" ></el-input>
+                    </el-form-item>
+                    <el-form-item label="公司地址" :label-width="formLabelWidth">
+                        <el-input v-model="form.address" ></el-input>
+=======
                         <el-input v-model="form.number"></el-input>
                     </el-form-item>
                     <el-form-item label="公司人数" :label-width="formLabelWidth">
@@ -111,6 +171,7 @@
                     </el-form-item>
                     <el-form-item label="公司地址" :label-width="formLabelWidth">
                         <el-input v-model="form.department" ></el-input>
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                     </el-form-item>
 
                 </el-form>
@@ -127,7 +188,11 @@
                     title="删除提示"
                     :visible.sync="deleteDialogShow"
                     width="400px">
+<<<<<<< HEAD
+                <span>你确定要删除: {{deleteCompanyName}} 这个公司吗？</span>
+=======
                 <span>你确定要删除: {{deleteCompanyName}} 这个用户吗？</span>
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                 <span slot="footer" class="dialog-footer">
                     <el-button size="mini" type="danger" @click="deleteDialogShow = false">取 消</el-button>
                     <el-button size="mini" type="primary" @click="doDeleteItem">确 定</el-button>
@@ -147,6 +212,23 @@
             return {
                 //加载
                 loading: false,
+<<<<<<< HEAD
+                editorCommitText:'修改公司信息',
+                editorDialogShow:false,
+                editTitle:'编辑公司信息',
+
+                //完整公司列表
+                companyList: [],
+                //选中公司列表数据
+                multipleSelection: [],
+                //搜索
+                search: {
+                    name:''
+                },
+                //  page/size
+                pageNavigation: {
+                    currentPage: 1,
+=======
                 editorCommitText:'修改用户信息',
                 editorDialogShow:false,
                 editTitle:'编辑用户信息',
@@ -165,6 +247,7 @@
                 //  page/size
                 pageNavigation: {
                     currentPage: 0,
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                     totalCount: 0,
                     pageSize: 5,
                 },
@@ -172,6 +255,13 @@
                 formLabelWidth:'120px',
                 //添加编辑数据
                 form:{
+<<<<<<< HEAD
+					name:'',
+                    num:'',
+					category:'',
+					description:'',
+					address:''
+=======
                     id:'',
                     number:'',
                     name:'',
@@ -179,6 +269,7 @@
                     college:'',
                     department:'',
                     phone:''
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                 },
                 deleteDialogShow: false,
                 deleteCompanyName: '',
@@ -287,7 +378,11 @@
                 this.deleteDialogShow = true;
             },
             doDeleteItem() {
+<<<<<<< HEAD
+                //去删除公司
+=======
                 //去删除用户
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                 api.deleteCompanyById(this.targetDeleteCompanyId).then(result => {
                     if (result.code === api.success_code) {
                         this.deleteDialogShow = false;
@@ -304,15 +399,23 @@
                 this.listCompanies()
             },
             doSearch() {
+<<<<<<< HEAD
+                api.doCompanySearch( this.search.name).then(result => {
+=======
                 api.doCompanySearch(this.search.number, this.search.name,this.search.college,this.search.department).then(result => {
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                     this.handleCompanyListResult(result);
                 });
             },
             cleanSearch() {
+<<<<<<< HEAD
+                this.search.name = '';
+=======
                 this.search.number = '';
                 this.search.name = '';
                 this.search.college = '';
                 this.search.department = '';
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                 this.listCompanies();
             },
             formatDate(dateStr) {
@@ -353,6 +456,18 @@
             },
             //添加、修改
             edit(item){
+<<<<<<< HEAD
+				this.form.id = item.id;
+                this.form.name = item.name;
+                this.form.num = item.num;
+				this.form.category = item.category;
+				this.form.description = item.description;
+				this.form.address = item.address;
+
+                this.editorDialogShow = true;
+                this.editorCommitText = '修改公司信息';
+                this.editTitle = '编辑公司信息';
+=======
                 this.form.number = item.number;
                 this.form.name = item.name;
                 this.form.passwd = item.passwd;
@@ -363,10 +478,15 @@
                 this.editorDialogShow = true;
                 this.editorCommitText = '修改用户信息';
                 this.editTitle = '编辑用户信息';
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
 
             },
             postCompany(){
                 //检查内容
+<<<<<<< HEAD
+                if (this.form.name === ''){
+                    this.showWarning('公司名字不能为空。');
+=======
                 if (this.form.number === ''){
                     this.showWarning('工号不能为空。');
                     return ;
@@ -377,6 +497,7 @@
                 }
                 if (this.form.passwd === ''){
                     this.showWarning('密码不能为空。');
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
                     return ;
                 }
                 //提交结果
@@ -417,12 +538,20 @@
 
             //重置数据
             resetForm(){
+<<<<<<< HEAD
+                this.form.name = '';
+				this.form.num = '',
+				this.form.category = '',
+				this.form.description = '',
+				this.form.address = ''
+=======
                 this.form.id = '';
                 this.form.name = '';
                 this.form.passwd = '';
                 this.form.college = '';
                 this.form.department = '';
                 this.form.phone = '';
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
             },
             showWarning(msg) {
                 this.$message({
@@ -430,13 +559,32 @@
                     type: 'warning',
                     center: true
                 })
+<<<<<<< HEAD
+            },
+			//添加该公司岗位
+			
+			addJob(item) {
+				let companyId = item.id;
+				this.$router.push({
+					path: '/job/post-job',
+					query: {
+						companyId: companyId
+					}
+				});
+			},
+=======
             }
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
         },
         mounted() {
             //console.log(hex_md5('666666'));
             this.listCompanies();
         }
+<<<<<<< HEAD
+    }
+=======
     };
+>>>>>>> 9c64dd2a89f38b9b94a98020bd26cdd25cd086ca
 </script>
 <style>
     .company-list-box {
